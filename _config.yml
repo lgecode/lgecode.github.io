@@ -1,0 +1,32 @@
+title: 程式筆記
+lang: en
+description: 程式相關的各種筆記，演算法、概念、SQL、Python、Java...等不定時更新
+
+theme: null
+
+edit: true
+addons_branch: true
+
+addons:
+  - github
+  # - i18n
+  # - plugins
+  - analytics
+
+copyright:
+  revision: true
+
+readme_index:
+  with_frontmatter: true
+
+sass:
+  style: compressed
+
+exclude:
+  - Makefile
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - requirements.txt
+  - jekyll-rtd-theme.gemspec

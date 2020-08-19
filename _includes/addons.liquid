@@ -1,0 +1,24 @@
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version" style="text-align:left">
+        <span class="fa fa-user"> About</span>
+        {% comment %} {% if site.addons_branch and site.github_metadata != false %}v: {{ branch }}{% endif %} {% endcomment %}
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        {%- assign items = site.addons | default: addons -%}
+        {% for item in items -%}
+            {%- if addons contains item -%}
+                {% include addons/{{ item }}.liquid %}
+            {%- endif -%}
+        {% endfor -%}
+        <hr>
+        <small>
+            <span>
+                Built with
+                <a href="https://jekyllrb.com/">Jekyll</a>
+                using the
+                <a href="https://github.com/rundocs/jekyll-rtd-theme">jekyll-rtd-theme</a> (MIT)
+            </span>
+        </small>
+    </div>
+</div>

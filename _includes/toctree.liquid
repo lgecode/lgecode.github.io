@@ -1,0 +1,19 @@
+{%- include reset/workdir.liquid %}
+
+{% comment %} list the root files {% endcomment %}
+<ul>
+    {%- for item in workdir_files -%}
+        {%- assign level = item.dir | append: "temp" | replace_first: "/", "" | split: "/" | size -%}
+        {%- capture current -%}
+            {%- if page.url == item.url %}current{% endif -%}
+        {%- endcapture %}
+        <li class="toctree-l{{ level }} {{ current }}">
+            <a class="reference internal {{ current }}" href="{{ item.url | relative_url }}">
+                {{ item.title | default: item.url }}
+            </a>
+        </li>
+    {%- endfor %}
+</ul>
+
+{% comment %} list the root dirs {% endcomment %}
+{%- for workdir in workdir_dirs %}{% include extend/toctree.liquid %}{% endfor -%}

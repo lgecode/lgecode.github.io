@@ -1,0 +1,12 @@
+.jekyll-metadata
+_site
+.sass-cache
+
+*.html
+*.gem
+*.whl
+Gemfile.lock
+_drafts/test_long/folder2/folder1/file1.md
+_drafts/test_long/folder2/file3.md
+_drafts/test_long/folder2/file2.md
+_drafts/test_long/folder2/file1.md
